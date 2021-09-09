@@ -1,0 +1,11 @@
+Exercícios de interpretação de código
+
+Resposta da 1 questão = 10 e 5
+
+Resposta da 2 questão = 10, 10 e 10
+
+Resposta da 3 questão = 
+
+let horasTrabdia = prompt("Quantas horas você trabalha por dia?")
+let moneyDia = prompt("Quanto você recebe por dia?")
+alert(`Voce recebe ${t/p} por hora`)
