@@ -1,185 +1,196 @@
-              
-                             //Exercícios de interpretação de código
+//Exercícios de interpretação de código
 
-                            // Exercício 1 
-// const filme = {
-// 	nome: "Auto da Compadecida", 
-// 	ano: 2000, 
-// 	elenco: [
-// 		"Matheus Nachtergaele", "Selton Mello", "Denise Fraga", 
-// 		"Virginia Cavendish"
-// 		], 
-// 	transmissoesHoje: [
-// 		{canal: "Telecine", horario: "21h"}, 
-// 		{canal: "Canal Brasil", horario: "19h"}, 
-// 		{canal: "Globo", horario: "14h"}
-// 		]
+
+
+//Exercício 1
+
+
+// const respostaDoUsuario = prompt("Digite o número que você quer testar")
+// const numero = Number(respostaDoUsuario)
+
+// if (numero % 2 === 0) {
+//   console.log("Passou no teste.")
+// } else {
+//   console.log("Não passou no teste.")
 // }
 
-// console.log(filme.elenco[0])
-// console.log(filme.elenco[filme.elenco.length - 1])
-// console.log(filme.transmissoesHoje[2])
+
+// a) Explique o que o código faz. Qual o teste que ele realiza? 
+
+// O código testa números, se o número for par, passará no teste, se for ímpar, não passará.
 
 
-// a) O que vai ser impresso no console?
+// b) Para que tipos de números ele imprime no console "Passou no teste"? 
 
-// Matheus Nachtergaele, Virginia Cavendish , Globo / 14 hrs
+// Números pares.
+
+// c) Para que tipos de números a mensagem é "Não passou no teste"?
+
+//Números ímpares.
 
 
-                        //Exercício 2
 
-                        
-// const cachorro = {
-// 	nome: "Juca", 
-// 	idade: 3, 
-// 	raca: "SRD"
+//Exercício 2
+
+
+// let fruta = prompt("Escolha uma fruta")
+// let preco
+// switch (fruta) {
+//   case "Laranja":
+//     preco = 3.5
+//     break;
+//   case "Maçã":
+//     preco = 2.25
+//     break;
+//   case "Uva":
+//     preco = 0.30
+//     break;
+//   case "Pêra":
+//     preco = 5.5
+//      // BREAK PARA O ITEM c.
+//   default:
+//     preco = 5
+//     break;
+// }
+// console.log("O preço da fruta ", fruta, " é ", "R$ ", preco)
+
+
+// a) Para que serve o código acima?
+
+//Para automatizar uma tarefa dentro de um supermercado.
+
+
+// b) Qual será a mensagem impressa no console, se o valor de fruta for `"Maçã"`?
+
+// 2,25.
+
+// c) Considere que um usuário queira comprar uma `Pêra`,
+//qual seria a mensagem impressa no console se retirássemos
+//o `break` que está logo acima do `default` 
+//(o `break` indicado pelo comentário "BREAK PARA O ITEM c.")?
+
+// O preço da fruta Pêra é R$ 5
+
+
+
+
+//Exercício 3 
+
+
+// const numero = Number(prompt("Digite o primeiro número."))
+
+// if(numero > 0) {
+//   console.log("Esse número passou no teste")
+// 	let mensagem = "Essa mensagem é secreta!!!"
+   
 // }
 
-// const gato = {...cachorro, nome: "Juba"}
-
-// const tartaruga = {...gato, nome: gato.nome.replaceAll("a", "o")}
-
-// console.log(cachorro)
-// console.log(gato)
-// console.log(tartaruga)
+// console.log(mensagem)
 
 
-//  a) O que vai ser impresso no console?
+// a) O que a primeira linha está fazendo?
 
-//  Juca, Juba e Jubo.
+//Pedindo ao usuário que digite um número qualquer.
+
+// b) Considere um usuário digitou o número 10. 
+//Qual será a mensagem do terminal? E se fosse o número -10?
+
+// Com o número 10, aparece 'Esse número passou no teste' e com o 
+// número -10 Acontece um erro 'mensagem is not defined'.
+
+// c) Haverá algum erro no console? Justifique usando os conceitos de bloco ou escopo.
+
+//   Sim, o erro acontece pois o console.log não consegue acessar 
+//   as informações que estão acima da chave.
+
+
+//Exercícios de escrita de código
 
 
 
-//  b) O que faz a sintaxe dos três pontos antes do nome de um objeto ? 
+//Exercício 1
 
-// A sintaxe irá ''puxar'' os dados anteriores.
+// a) Faça um `prompt` para receber a idade do usuário e guarde em uma variável.
+
+// b) Garanta que essa variável é do tipo `Number`, você deve usar o cast para number para isso.
+
+// c) Agora veja se essa idade do usuário corresponde à idade mínima que permite dirigir.
+//  Se sim, imprima no console
+//  `"Você pode dirigir"`, caso contrário, imprima `"Você não pode dirigir."`
 
 
-                           //Exercício 3
+// const idadeDirigir = Number(prompt("Digite a sua idade"))
 
- 
-// function minhaFuncao(objeto, propriedade) {
-// 	return objeto[propriedade]
+//  if(idadeDirigir >= 18) {
+//      console.log("Você pode dirigir")
+//  } else {
+//      console.log("Você não pode dirigir")
 // }
 
-// const pessoa = {
-//   nome: "Caio", 
-//   idade: 23, 
-//   backender: false
+
+
+//Exercício 2 
+
+// Agora faça um programa que verifica que turno do dia um aluno estuda. 
+// Peça para digitar M (matutino) ou V (Vespertino) ou N (Noturno). Imprima no console a mensagem
+//  "Bom Dia!", "Boa Tarde!" ou "Boa Noite!". Utilize o bloco if/else
+
+// const turnoDia = prompt("Digite M (Matutino), V (Vespertino) ou N (Noturno) para podermos saber em que turno do dia você estuda ")
+
+
+
+// if (turnoDia = M) {
+//     console.log('Bom dia!')
 // }
-
-// console.log(minhaFuncao(pessoa, "backender"))
-
-
-
-// a) O que vai ser impresso no console?
-
-// todos os dados da variável 'pessoa' + o resultado do booleano, 
-// que seria backender = false . E também altura = undefined. Corrigindo, apenas aparece false (kk)
-
-
-
-// b) Explique o valor impresso no console. Você sabe por que isso aconteceu?             
-
-// Sim, pois o console.log está apenas pedindo um dado, se backender é true ou false.
-
-
-
-
-                     // Exercícios de escrita de código
-
-
-
-                     // Exercício 1 
-
-
-// a) Crie um objeto. Ele deve conter duas propriedades: 
-// nome (string) e apelidos (um array que sempre terá exatamente **três apelidos**).
-//  Depois, escreva uma função que recebe como entrada um objeto
-//   e imprime uma mensagem no modelo abaixo**:** 
-
-
-//  const pessoa = {
-//    nome: "Vinicius", 
-//     apelidos: ["Vinão", "Vitão", "Viney"]
-
-
-//   }
-// console.log('Eu sou Vinicius, mas pode me chamar de: Vinão, Vitão ou Viney')
-
-
-// b) Agora, usando o operador spread, crie um novo objeto mantendo o 
-// valor da propriedade nome, mas com uma nova lista de três apelidos. Depois, 
-// chame a função feita no item anterior passando como argumento o novo objeto
-
-// const pessoa = {
-//       nome: "Vinicius", 
-//       apelidos: ["Vinão", "Vitão", "Viney"] ,
-//       novosApelidos: ["V", "Jailson" , "Vladimir" ]
+// else if (turnoDia = V) {
+//     console.log('Boa Tarde!')
+// }
+    
+// if (turnoDia = N) {
+//     console.log('Boa noite!')
 
 // }
 
-//   console.log('Eu sou Vinicius, mas pode me chamar de: V, Jailson e Vladimir')
-  
 
 
+//Exercício 3
+
+//  const turnoDia = prompt("Digite M(Matutino), V(Vespertino) ou N(Noturno) para podermos saber em que turno do dia você estuda ")
 
 
-//              Exercício 2 
-
-
-//a) Crie dois objetos diferentes com as seguintes propriedades:
-// nome, idade e profissão.
-
-
-// b) Escreva uma função que receba esses objetos e 
-// retorne um array com as seguintes informações:
-
-// 1. O valor de `nome`
-// 2. O numero de caracteres do valor `nome`
-// 3. O valor de `idade`
-// 4. O valor de `profissão`
-// 5. O numero de caracteres do valor `profissão`
-
-// const pessoa = { 
-//   nome: "Vinicius",
-//   idade: 20,
-//   profissão : "jogador profissional de freefire"
+// switch (turnoDia) {
+//        case "M":
+//           console.log("Bom dia!")
+//          break
+//         case "V":
+//           console.log("Boa tarde!")
+//            break
+//         case "N":
+//            console.log("Boa noite!")
+//            break
+//            default:
+//           console.log("Seu turno não foi encontrado. Escolha 'Matutino', 'Vespertino' ou 'Noturno' ")   
 // }
-// minhafuncao(pessoa)
-// return ["Vinicius",8 , 20, "jogador profissional de freefire", 9]
 
 
 
-//           Exercício 3
+//Exercício 4
 
+// Considere a situação: você vai ao cinema com um amigo ou amiga, porém ele/ela só assistirá a um filme 
+// com você se ele for do gênero fantasia e se o ingresso está abaixo de 15 reais. Faça um código que 
+// pergunta ao usuário qual o gênero de filme que vão assistir e outra pergunta sobre o preço do ingresso,
+//  então verifique se seu amigo ou amiga vai topar assistir o filme.
+//  Caso positivo, imprima no console a mensagem: "Bom filme!", caso contrário, imprima "Escolha outro filme :("
 
+// const generoFilme = prompt("Digite o gênero do filme que você quer assistir ")
+// const preçoIngresso = prompt =Number("Digite o preço do ingresso")
 
-// a) Crie uma variável de escopo global que guarde um `array` vazio chamada `carrinho`
+// if(generofilme = fantasia && preçoIngresso < 15) {
+// console.log('Bom filme!')
 
-// b) Crie três novos objetos que representem frutas de um sacolão.
-//  Eles devem ter as seguintes propriedades: nome (`string`)
-//   e disponibilidade (`boolean` - devem começar como `true`)
-
-// c) Crie uma função que **receba** um objeto fruta 
-// por **parâmetro** e coloque-a dentro do array de `carrinho`. 
-// Invoque essa função passando os três objetos criados. 
-
-
-// d) Imprima a variável `carrinho` e garanta que ela 
-// agora seja um **array preenchido com três objetos.** 
-
-// const carrinho  =  {
-
-// objetoFruta1: ("Maçã") ,
-// objetoFruta2: ("Banana"),
-// objetoFruta3: ("Morango"),
-
-// disponibilidade = true
-
-// carrinho.push(objetoFruta1)
 // }
-            
-// console.log(carrinho)
+
+
+
 
 
