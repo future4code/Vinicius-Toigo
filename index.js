@@ -1,195 +1,185 @@
 //Exercícios de interpretação de código
 
+//Exercício 1 
 
+//O que o código abaixo está fazendo? Qual o resultado impresso no console?
 
-//Exercício 1
-
-
-// const respostaDoUsuario = prompt("Digite o número que você quer testar")
-// const numero = Number(respostaDoUsuario)
-
-// if (numero % 2 === 0) {
-//   console.log("Passou no teste.")
-// } else {
-//   console.log("Não passou no teste.")
+// let valor = 0
+// for(let i = 0; i < 5; i++) {
+//   valor += i
 // }
+// console.log(valor)
 
 
-// a) Explique o que o código faz. Qual o teste que ele realiza? 
-
-// O código testa números, se o número for par, passará no teste, se for ímpar, não passará.
-
-
-// b) Para que tipos de números ele imprime no console "Passou no teste"? 
-
-// Números pares.
-
-// c) Para que tipos de números a mensagem é "Não passou no teste"?
-
-//Números ímpares.
-
+// Está checando números dentro de um array, 10.
 
 
 //Exercício 2
 
 
-// let fruta = prompt("Escolha uma fruta")
-// let preco
-// switch (fruta) {
-//   case "Laranja":
-//     preco = 3.5
-//     break;
-//   case "Maçã":
-//     preco = 2.25
-//     break;
-//   case "Uva":
-//     preco = 0.30
-//     break;
-//   case "Pêra":
-//     preco = 5.5
-//      // BREAK PARA O ITEM c.
-//   default:
-//     preco = 5
-//     break;
-// }
-// console.log("O preço da fruta ", fruta, " é ", "R$ ", preco)
-
-
-// a) Para que serve o código acima?
-
-//Para automatizar uma tarefa dentro de um supermercado.
-
-
-// b) Qual será a mensagem impressa no console, se o valor de fruta for `"Maçã"`?
-
-// 2,25.
-
-// c) Considere que um usuário queira comprar uma `Pêra`,
-//qual seria a mensagem impressa no console se retirássemos
-//o `break` que está logo acima do `default` 
-//(o `break` indicado pelo comentário "BREAK PARA O ITEM c.")?
-
-// O preço da fruta Pêra é R$ 5
-
-
-
-
-//Exercício 3 
-
-
-// const numero = Number(prompt("Digite o primeiro número."))
-
-// if(numero > 0) {
-//   console.log("Esse número passou no teste")
-// 	let mensagem = "Essa mensagem é secreta!!!"
-   
+// const lista = [10, 11, 12, 15, 18, 19, 21, 23, 25, 27, 30]
+// for (let numero of lista) {
+//   if (numero > 18) {
+// 		console.log(numero)
+// 	}
 // }
 
-// console.log(mensagem)
+//a) O que vai ser impresso no console?  19, 21, 23, 25, 27 e 30. Os números maiores que 18.
+
+//b) Se eu quisesse acessar o **índice** de cada elemento dessa lista, 
+//   o `for...of...` é suficiente? Se não, o que poderia ser usado para fazer isso?
+
+//Sim.
 
 
-// a) O que a primeira linha está fazendo?
 
-//Pedindo ao usuário que digite um número qualquer.
+//Exercício 3
 
-// b) Considere um usuário digitou o número 10. 
-//Qual será a mensagem do terminal? E se fosse o número -10?
+//Qual seria o resultado impresso no console, se o usuário digitasse o número 4 ?
 
-// Com o número 10, aparece 'Esse número passou no teste' e com o 
-// número -10 Acontece um erro 'mensagem is not defined'.
+// const quantidadeTotal = Number(prompt("Digite a quantidade de linhas: "))
+// let quantidadeAtual = 0
+// while(quantidadeAtual < quantidadeTotal){
+//   let linha = ""
+//   for(let asteriscos = 0; asteriscos < quantidadeAtual + 1; asteriscos++){
+//     linha += "*"
+//   }
+//   console.log(linha)
+//   quantidadeAtual++
+// }
 
-// c) Haverá algum erro no console? Justifique usando os conceitos de bloco ou escopo.
 
-//   Sim, o erro acontece pois o console.log não consegue acessar 
-//   as informações que estão acima da chave.
+//*
+//** 
+//*** 
+//**** 
+
 
 
 //Exercícios de escrita de código
 
 
 
-//Exercício 1
-
-// a) Faça um `prompt` para receber a idade do usuário e guarde em uma variável.
-
-// b) Garanta que essa variável é do tipo `Number`, você deve usar o cast para number para isso.
-
-// c) Agora veja se essa idade do usuário corresponde à idade mínima que permite dirigir.
-//  Se sim, imprima no console
-//  `"Você pode dirigir"`, caso contrário, imprima `"Você não pode dirigir."`
-
-
-// const idadeDirigir = Number(prompt("Digite a sua idade"))
-
-//  if(idadeDirigir >= 18) {
-//      console.log("Você pode dirigir")
-//  } else {
-//      console.log("Você não pode dirigir")
-// }
-
-
-
-//Exercício 2 
-
-// Agora faça um programa que verifica que turno do dia um aluno estuda. 
-// Peça para digitar M (matutino) ou V (Vespertino) ou N (Noturno). Imprima no console a mensagem
-//  "Bom Dia!", "Boa Tarde!" ou "Boa Noite!". Utilize o bloco if/else
-
-// const turnoDia = prompt("Digite M (Matutino), V (Vespertino) ou N (Noturno) para podermos saber em que turno do dia você estuda ")
-
-
-
-// if (turnoDia = M) {
-//     console.log('Bom dia!')
-// }
-// else if (turnoDia = V) {
-//     console.log('Boa Tarde!')
-// }
+// 1. Pergunte ao usuário quantos bichinhos de estimação ele tem e guarde esse dado em uma variável. 
     
-// if (turnoDia = N) {
-//     console.log('Boa noite!')
+//     a) Se a quantidade for 0, imprima no console "Que pena! Você pode adotar um pet!"
+    
+//     b) Se a quantidade for maior que 0, solicite que o usuário digite os nomes deles, um por um, e guarde esses nomes em um array
+    
+//     - 💡 Dica
+        
+//         Coloque o seu prompt dentro de um loop. Esse loop deve ser executado a
+// mesma quantidade de vezes que o usuário inseriu. Por exemplo: se o usuário tem 4 pets, ele deve conseguir inserir 4 nomes.
+        
+    
+//     c) Por fim, imprima o array com os nomes dos bichinhos no console
+
+
+
+
+// const pets=[]
+
+// const quantidadePets=Number(prompt("Quantos bichinhos de estimação você tem?"))
+
+// if(quantidadePets === 0) 
+
+// console.log ("Que pena! Você pode adotar um pet!")
+
+// else{for (i=0; i<quantidadePets; i++) {
+
+// 	const nomeDospets=prompt("Digite os nomes dos seus "+(i+1)+"º pets")
+    
+// 	pets.push(nomeDospets)
+// }
 
 // }
 
+// console.log(pets)
+
+ 
 
 
-//Exercício 3
-
-//  const turnoDia = prompt("Digite M(Matutino), V(Vespertino) ou N(Noturno) para podermos saber em que turno do dia você estuda ")
 
 
-// switch (turnoDia) {
-//        case "M":
-//           console.log("Bom dia!")
-//          break
-//         case "V":
-//           console.log("Boa tarde!")
-//            break
-//         case "N":
-//            console.log("Boa noite!")
-//            break
-//            default:
-//           console.log("Seu turno não foi encontrado. Escolha 'Matutino', 'Vespertino' ou 'Noturno' ")   
+    
+// // 2. Considere que você tenha acesso a um `array`  (chamado de 'array original') 
+// que é composto somente de números. Baseando-se nisso, crie uma função para cada
+//  um dos itens abaixo, realizando as operações pedidas:
+    
+// //     a) Escreva um programa que **imprime** cada um dos valores do array original.
+
+
+
+
+// let array =[1,2,3,4,5]
+// console.log(array)
+
+
+// //     b) Escreva um programa que **imprime** cada um dos valores do array original divididos por 10
+    
+
+// let array =[1,2,3,4,5,]
+
+// let resultado1 = 10 / [1]
+// let resultado2 = 10 / [2]
+// let resultado3 = 10 / [3]
+// let resultado4 =  10 / [4]
+// let resultado5 =  10 / [5]
+
+//  console.log(resultado1,resultado2,resultado3,resultado4,resultado5 )
+
+
+
+// //     c) Escreva um programa que **crie** um novo array contendo, somente, os números
+//  pares do array original e **imprima** esse novo array
+    
+
+// let array =[1,2,3,4,5,]
+
+// let novoArray = []
+
+// for (let i = 0; i < array.length; i++) {
+
+//     if(array[i]%2==0)	
+
+//         novoArray[i]=array[i]
 // }
 
+// console.log(novoArray) 
 
 
-//Exercício 4
 
-// Considere a situação: você vai ao cinema com um amigo ou amiga, porém ele/ela só assistirá a um filme 
-// com você se ele for do gênero fantasia e se o ingresso está abaixo de 15 reais. Faça um código que 
-// pergunta ao usuário qual o gênero de filme que vão assistir e outra pergunta sobre o preço do ingresso,
-//  então verifique se seu amigo ou amiga vai topar assistir o filme.
-//  Caso positivo, imprima no console a mensagem: "Bom filme!", caso contrário, imprima "Escolha outro filme :("
 
-// const generoFilme = prompt("Digite o gênero do filme que você quer assistir ")
-// const preçoIngresso = prompt =Number("Digite o preço do ingresso")
 
-// if(generofilme = fantasia && preçoIngresso < 15) {
-// console.log('Bom filme!')
+// //     d) Escreva um programa que **crie** um novo array contendo strings, 
+// da seguinte forma: "O elemento do índex `i` é: `numero`". Depois, **imprima** este novo array.
+    
+// arrayOriginal = [1,2,3,4,5]
 
+// let criaNovoArrayString = (arrayOriginal) => {
+
+// 	let arrayString = [];
+    
+// 	for (let i = 0; i < arrayOriginal.length; i++) {
+
+// 		arrayString[i] = arrayOriginal[i];
+
+// 		console.log("O elemento do índex "+ i +" é: "+ arrayString[i])
+// 	}
 // }
+// criaNovoArrayString (arrayOriginal)
 
+
+
+
+// //     e) Escreva um programa que imprima no console o maior 
+// e o menor números contidos no array original
+    
+
+//  arrayOriginal = (1,2,3,4,5)
+
+
+//  console.log('1' , '5' )
 
 
 
