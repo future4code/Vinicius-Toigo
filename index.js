@@ -1,186 +1,196 @@
 //Exercícios de interpretação de código
 
-//Exercício 1 
 
-//O que o código abaixo está fazendo? Qual o resultado impresso no console?
 
-// let valor = 0
-// for(let i = 0; i < 5; i++) {
-//   valor += i
+// 1
+
+
+// const usuarios = [
+//   { nome: "Amanda Rangel", apelido: "Mandi" },
+//   { nome: "Laís Petra", apelido: "Laura" },
+//   { nome: "Letícia Chijo", apelido: "Chijo" }
+// ]
+
+// const novoArrayA = usuarios.map((item, index, array) => {
+//    console.log(item, index, array)
+// })
+
+
+//a) O que vai ser impresso no console?
+
+// Os 3 nomes + apelidos separados por array
+
+
+
+// 2
+
+// const usuarios = [
+//     { nome: "Amanda Rangel", apelido: "Mandi" },
+//     { nome: "Laís Petra", apelido: "Laura" },
+//     { nome: "Letícia Chijo", apelido: "Chijo" },
+//   ]
+  
+//   const novoArrayB = usuarios.map((item, index, array) => {
+//      return item.nome
+//   })
+  
+//   console.log(novoArrayB)
+
+
+  //a) O que vai ser impresso no console?
+
+  // Os 3 nomes + array com os 3 nomes.
+
+
+
+  // 3
+  
+//   const usuarios = [
+//     { nome: "Amanda Rangel", apelido: "Mandi" },
+//     { nome: "Laís Petra", apelido: "Laura" },
+//     { nome: "Letícia Chijo", apelido: "Chijo" },
+//   ]
+  
+//   const novoArrayC = usuarios.filter((item, index, array) => {
+//      return item.apelido !== "Chijo"
+//   })
+  
+//   console.log(novoArrayC)
+
+  
+  //a) O que vai ser impresso no console?
+
+  // 2 nomes, pois está filtrando o index 2 (Letícia Chijo)
+
+
+
+
+
+  //  Exercícios de escrita de código
+
+
+
+  // 1
+
+
+//   1. Dado o seguinte array de cachorrinhos que são clientes de um pet shop, 
+//   realize as operações pedidas nos itens abaixo utilizando as funções de array **map** e **filter:**
+    
+    
+    // const pets = [
+    //    { nome: "Lupin", raca: "Salsicha"},
+    //    { nome: "Polly", raca: "Lhasa Apso"},
+    //    { nome: "Madame", raca: "Poodle"},
+    //    { nome: "Quentinho", raca: "Salsicha"},
+    //    { nome: "Fluffy", raca: "Poodle"},
+    //    { nome: "Caramelo", raca: "Vira-lata"},
+    // ]
+    
+
+    
+    // a) Crie um novo array que contenha apenas o nome dos doguinhos
+    
+
+
+    // const apenasNomes = pets.map
+    
+    // (nomes=>nomes.nome)    
+
+    // console.log(apenasNomes)
+
+
+    
+
+    // b) Crie um novo array apenas com os [cachorros salsicha]
+    
+     
+
+    // const filtrarSalsichas = (item,index,array) => {
+
+    //  return item.raca === "Salsicha"
+    // }
+    //  const filtrar = pets.filter (filtrarSalsichas)
+
+    //  console.log(filtrar)
+     
+    
+    
+
+    // c) Crie um novo array que possuirá mensagens para enviar para todos os clientes que são poodles.
+    //  A mensagem deve ser: "Você ganhou um cupom de desconto de 10% para tosar o/a `[NOME]`!"
+    
+
+// const filtrarPoodles = (item,index,array) => {
+
+//      return item.raca === "Poodle"
+//     }
+//      const filtrar = pets.filter (filtrarPoodles)
+
+
+//      console.log("Você ganhou um cupom de desconto de 10% para tosar o seu Poodle!")
+     
+
+
+// 2
+
+
+//Dado o seguinte array de produtos, 
+//realize as operações pedidas nos itens abaixo utilizando as funções de array map e filter:
+
+
+// const produtos = [
+//     { nome: "Alface Lavada", categoria: "Hortifruti", preco: 2.5 },
+//     { nome: "Guaraná 2l", categoria: "Bebidas", preco: 7.8 },
+//     { nome: "Veja Multiuso", categoria: "Limpeza", preco: 12.6 },
+//     { nome: "Dúzia de Banana", categoria: "Hortifruti", preco: 5.7 },
+//     { nome: "Leite", categoria: "Bebidas", preco: 2.99 },
+//     { nome: "Cândida", categoria: "Limpeza", preco: 3.30 },
+//     { nome: "Detergente Ypê", categoria: "Limpeza", preco: 2.2 },
+//     { nome: "Vinho Tinto", categoria: "Bebidas", preco: 55 },
+//     { nome: "Berinjela kg", categoria: "Hortifruti", preco: 8.99 },
+//     { nome: "Sabão em Pó Ypê", categoria: "Limpeza", preco: 10.80 }
+//  ]
+
+
+
+//  a) Crie um novo array que contenha apenas o nome de cada item
+
+// const nomeItem = (item,index,array) => {
+
+// return item.nome 
 // }
-// console.log(valor)
+// const filtrar = produtos.map(nomeItem)
+
+// console.log(filtrar)
 
 
-// Está checando números dentro de um array, 10.
+
+// b) Crie um novo array que contenha um objeto com o nome e o preço de cada item, 
+// aplicando 5% de desconto em todos eles
 
 
-//Exercício 2
 
 
-// const lista = [10, 11, 12, 15, 18, 19, 21, 23, 25, 27, 30]
-// for (let numero of lista) {
-//   if (numero > 18) {
-// 		console.log(numero)
-// 	}
+// c) Crie um novo array que contenha apenas os objetos da categoria Bebidas
+
+// const nomeBebidas = (item,index,array) => {
+
+// return item.Bebidas === "Bebidas"
 // }
+// const filtrar = nome.map(nomeBebidas)
 
-//a) O que vai ser impresso no console?  19, 21, 23, 25, 27 e 30. Os números maiores que 18.
+// console.log(filtrar)
 
-//b) Se eu quisesse acessar o **índice** de cada elemento dessa lista, 
-//   o `for...of...` é suficiente? Se não, o que poderia ser usado para fazer isso?
 
-//Sim.
 
 
 
-//Exercício 3
+// d) Crie um novo array que contenha apenas os objetos cujo nome contenha a palavra "Ypê"
 
-//Qual seria o resultado impresso no console, se o usuário digitasse o número 4 ?
+//   const filtrarYpe = (item,index,array) => {
 
-// const quantidadeTotal = Number(prompt("Digite a quantidade de linhas: "))
-// let quantidadeAtual = 0
-// while(quantidadeAtual < quantidadeTotal){
-//   let linha = ""
-//   for(let asteriscos = 0; asteriscos < quantidadeAtual + 1; asteriscos++){
-//     linha += "*"
-//   }
-//   console.log(linha)
-//   quantidadeAtual++
-// }
+//      return item.nome === "Ypê"
+//     }
+//      const filtrar = nome.filter (filtrarYpe)
 
-
-//*
-//** 
-//*** 
-//**** 
-
-
-
-//Exercícios de escrita de código
-
-
-
-// 1. Pergunte ao usuário quantos bichinhos de estimação ele tem e guarde esse dado em uma variável. 
-    
-//     a) Se a quantidade for 0, imprima no console "Que pena! Você pode adotar um pet!"
-    
-//     b) Se a quantidade for maior que 0, solicite que o usuário digite os nomes deles, um por um, e guarde esses nomes em um array
-    
-//     - 💡 Dica
-        
-//         Coloque o seu prompt dentro de um loop. Esse loop deve ser executado a
-// mesma quantidade de vezes que o usuário inseriu. Por exemplo: se o usuário tem 4 pets, ele deve conseguir inserir 4 nomes.
-        
-    
-//     c) Por fim, imprima o array com os nomes dos bichinhos no console
-
-
-
-
-// const pets=[]
-
-// const quantidadePets=Number(prompt("Quantos bichinhos de estimação você tem?"))
-
-// if(quantidadePets === 0) 
-
-// console.log ("Que pena! Você pode adotar um pet!")
-
-// else{for (i=0; i<quantidadePets; i++) {
-
-// 	const nomeDospets=prompt("Digite os nomes dos seus "+(i+1)+"º pets")
-    
-// 	pets.push(nomeDospets)
-// }
-
-// }
-
-// console.log(pets)
-
- 
-
-
-
-
-    
-// // 2. Considere que você tenha acesso a um `array`  (chamado de 'array original') 
-// que é composto somente de números. Baseando-se nisso, crie uma função para cada
-//  um dos itens abaixo, realizando as operações pedidas:
-    
-// //     a) Escreva um programa que **imprime** cada um dos valores do array original.
-
-
-
-
-// let array =[1,2,3,4,5]
-// console.log(array)
-
-
-// //     b) Escreva um programa que **imprime** cada um dos valores do array original divididos por 10
-    
-
-// let array =[1,2,3,4,5,]
-
-// let resultado1 = 10 / [1]
-// let resultado2 = 10 / [2]
-// let resultado3 = 10 / [3]
-// let resultado4 =  10 / [4]
-// let resultado5 =  10 / [5]
-
-//  console.log(resultado1,resultado2,resultado3,resultado4,resultado5 )
-
-
-
-// //     c) Escreva um programa que **crie** um novo array contendo, somente, os números
-//  pares do array original e **imprima** esse novo array
-    
-
-// let array =[1,2,3,4,5,]
-
-// let novoArray = []
-
-// for (let i = 0; i < array.length; i++) {
-
-//     if(array[i]%2==0)	
-
-//         novoArray[i]=array[i]
-// }
-
-// console.log(novoArray) 
-
-
-
-
-
-// //     d) Escreva um programa que **crie** um novo array contendo strings, 
-// da seguinte forma: "O elemento do índex `i` é: `numero`". Depois, **imprima** este novo array.
-    
-// arrayOriginal = [1,2,3,4,5]
-
-// let criaNovoArrayString = (arrayOriginal) => {
-
-// 	let arrayString = [];
-    
-// 	for (let i = 0; i < arrayOriginal.length; i++) {
-
-// 		arrayString[i] = arrayOriginal[i];
-
-// 		console.log("O elemento do índex "+ i +" é: "+ arrayString[i])
-// 	}
-// }
-// criaNovoArrayString (arrayOriginal)
-
-
-
-
-// //     e) Escreva um programa que imprima no console o maior 
-// e o menor números contidos no array original
-    
-
-//  arrayOriginal = (1,2,3,4,5)
-
-
-//  console.log('1' , '5' )
-
-
-
-
+//      console.log(filtrar)
