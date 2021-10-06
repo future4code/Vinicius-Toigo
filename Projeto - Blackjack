@@ -1,0 +1,63 @@
+// O que funciona - nossoJogo.js
+
+
+ 
+// const iniciarPartida = confirm("Quer iniciar uma nova rodada?")
+// if (iniciarPartida) {
+
+//    let cartaUsuario=comprarCarta()
+//    let cartaUsuario2=comprarCarta()
+
+//    let cartaCOM=comprarCarta()
+//    let cartaCOM2=comprarCarta()
+
+//    let pontosUsuario = cartaUsuario.valor + cartaUsuario2.valor
+//    let pontosCOM = cartaCOM.valor + cartaCOM2.valor
+
+//    console.log(`Cartas do usuário : ${cartaUsuario.texto} ${cartaUsuario2.texto} - ${pontosUsuario}`)
+
+//    console.log(`Cartas do computador: ${cartaCOM.texto} ${cartaCOM2.texto} - ${pontosCOM}`)
+
+//    pontosUsuario > pontosCOM ? console.log("O usuário ganhou!") : pontosCOM > pontosUsuario ? 
+
+//    console.log("O computador ganhou!") :
+
+//    console.log("Empate!")
+// }
+
+
+
+// O que não funciona - desafio.js
+
+
+
+ const iniciarPartida = confirm("Quer iniciar uma nova rodada?")
+if (iniciarPartida) {
+
+   let cartaUsuario=comprarCarta()
+   let cartaUsuario2=comprarCarta()
+
+   let cartaCOM=comprarCarta()
+   let cartaCOM2=comprarCarta()
+
+   let pontosUsuario = cartaUsuario.valor + cartaUsuario2.valor
+   let pontosCOM = cartaCOM.valor + cartaCOM2.valor
+
+   let comparação = cartaUsuario.valor +  cartaUsuario2.valor >= 21
+
+   if(comparação){
+   cartaUsuario.valor +  cartaUsuario2.valor >= 21
+   console.log('Você perdeu!')
+
+
+   }
+
+   console.log(`Cartas do usuário : ${cartaUsuario.texto} ${cartaUsuario2.texto} - ${pontosUsuario}`)
+
+   console.log(`Cartas do computador: ${cartaCOM.texto} ${cartaCOM2.texto} - ${pontosCOM}`)
+
+}
+console.log(comparação)
+  
+
+
