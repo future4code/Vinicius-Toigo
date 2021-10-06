@@ -1,0 +1,138 @@
+exercicios.js
+
+// // // EXERCÍCIO 01
+
+// function inverteArray(array) {
+	
+// 	const arrayInvertido = array.map((item, index, array) => 
+// 	array [array.length - index - 1]);
+// 	return( arrayInvertido)
+
+// }
+
+
+
+
+
+
+// // EXERCÍCIO 02
+
+// function retornaNumerosParesElevadosADois(array) {
+
+// 	const numerosParesElevados = array.filter
+
+// 	(item => item % 2 == 0).map(item => item * item)
+
+// 	return numerosParesElevados
+// }
+
+
+ 
+
+
+
+// }
+
+// // EXERCÍCIO 03
+
+// function retornaNumerosPares(array) {
+
+//   const arrayPares = array.filter
+//   (array => array % 2 === 0) 
+
+//     return(arrayPares)
+//   }
+
+
+
+// // EXERCÍCIO 04
+
+//   function retornaMaiorNumero(array) {
+
+// 	let maiorNumero = 0;
+
+// 	for (let i = 0; i < array.length; i++) {
+
+// 	   if ( array[i] > maiorNumero ) {
+// 		  maiorNumero = array[i];
+// 	   }
+// 	}
+// return(maiorNumero)
+//   }
+
+ 
+
+// // EXERCÍCIO 05
+
+
+
+// function retornaQuantidadeElementos(array) {
+  
+// 	let quantidadeElementos = array.length
+// 	return (quantidadeElementos)
+
+// }
+
+
+// // EXERCÍCIO 06
+
+// function retornaExpressoesBooleanas() {
+
+// 	const booleano1 = true
+// 	const booleano2 = false
+// 	const booleano3 = !booleano2 
+// 	const booleano4 = !booleano3 
+
+// 	const retornaBooleano = [booleano1 && booleano2 && !booleano4, 
+
+// 	 (booleano1 && booleano2) || !booleano3, 
+	
+// 	  (booleano2 || booleano3) && (booleano4 || booleano1),
+	
+// 	 !(booleano2 && booleano3) || !(booleano1 && booleano3) ,
+	
+// 	 !(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3)]
+    
+//     return(retornaBooleano)
+		
+// }
+
+
+
+// // EXERCÍCIO 07
+
+// function retornaNNumerosPares(n) {
+
+
+// 	const retornaNumerospares = []
+
+// 	let par = 0
+// 	let i = 0
+	
+// 	while(i < n){
+// 	   i++
+// 	   retornaNumerospares.push(par)
+// 	   par += 2
+// 	}
+// 	return (retornaNumerospares)
+// }
+
+
+
+// // EXERCÍCIO 08
+
+// function checaTriangulo(a, b, c) {
+
+// 	if((a === b) && (b === c) && (c === a)){  
+
+//         return "Equilátero"
+//     } else if((a !== b) != (b !== c) !== (c !== a)){
+
+//         return "Escaleno"
+
+//     } else { 
+//         return "Isósceles"
+//     }
+// }
+	
+ 
