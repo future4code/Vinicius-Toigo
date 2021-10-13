@@ -1,258 +1,406 @@
-// // Exemplos
+// // // EXERCÍCIO 01
 
-
-// Exercício 0A
-// function soma() {
-//   // escreva seu código aqui
-//   const num1 = prompt('Digite o primeiro número')
-//   const num2 = prompt('Digite o segundo número')
-
-//   console.log(Number(num1) + Number(num2))
-// }
-
-// // Exercício 0B
-// function imprimeMensagem() {
-//   // escreva seu código aqui
-//   const mensagem = prompt('Digite sua mensagem')
-
-//   console.log(mensagem)
-// }
-
-// // ---------------------------------------------------
-
-
-
-// // Exercícios
-
-// // Exercício 1
-
-//   // escreva seu código aqui
-
-// function calculaAreaRetangulo() {
-
-//   const num1 = prompt('Digite o primeiro número da altura de um retangulo')
-//   const num2 = prompt('Digite o segundo número da largura de um retangulo')
-  
-//   const result = num1 * num2
-  
-//   console.log (result)
-
-// }
-
-
-
-// // Exercício 2
-
-
-
-//   // escreva seu código aqui
-
-// function imprimeIdade() {
-//   const anoAtual = prompt('Digite o ano em que estamos')
-//   const anoDenascimento = prompt('Digite seu ano de nascimento')
-
-// const resultado = anoAtual - anoDenascimento
-
-// console.log(resultado)
-
-
-// }
-
-
-
-// // Exercício 3
-
-
-//   // escreva seu código aqui
-
-// function calculaIMC() {
-
-//     const peso = prompt('Digite o seu peso em kilogramas')
-//     const altura =prompt('Digite sua altura em metros')
-
-//     console.log (peso / ( altura * altura ) )
-// }
-
-
-
-
-
-
-
-// // Exercício 4
-
-//   // escreva seu código aqui
-
-// function imprimeInformacoesUsuario() {
-//     const nome = prompt('Digite o seu nome')
-//     const idade = prompt('Digite a sua idade')
-//     const email = prompt('Digite o seu e-mail')
-
-//     console.log("Meu nome é", nome, "tenho", idade, "anos, e o meu email é", email)
-// }
-
-
-
-
-// // Exercício 5
-
-
-//   // escreva seu código aqui
-
-
-// function imprimeTresCoresFavoritas() {
-
-//     const cor1 = prompt('Digite a sua cor favorita')
-//     const cor2 = prompt('Digite a sua segunda cor favorita')
-//     const cor3 = prompt('Digite a sua terceira cor favorita')
-
-//     console.log([cor1] , [cor2] , [cor3])
+// function inverteArray(array) {
+	
+// 	const arrayInvertido = array.map((item, index, array) => 
+// 	array [array.length - index - 1]);
+// 	return( arrayInvertido)
 
 // }
 
 
 
 
-// // Exercício 6
 
-//   // escreva seu código aqui
 
-// function retornaStringEmMaiuscula() {
-//     const aleatorio  = prompt('Digite algo aleatoriamente')
-//    aleatorio.toUpperCase()
+// // EXERCÍCIO 02
 
-// console.log( aleatorio.toUpperCase())
+// function retornaNumerosParesElevadosADois(array) {
 
-//  }
+// 	const numerosParesElevados = array.filter
 
+// 	(item => item % 2 == 0).map(item => item * item)
 
+// 	return numerosParesElevados
+// }
 
-
-// // Exercício 7
-
-
-//   // escreva seu código aqui
-
-//  function calculaIngressosEspetaculo() {
-
-//     const espetaculo = prompt('Digite o custo de um espetáculo de teatro')
-//     const valorDoingresso = prompt('Agora digite o valor de cada ingresso')
-
-//     const valor = espetaculo / valorDoingresso
-
-// console.log(valor)
-//  }
-
-
-
-
-
-// // Exercício 8
-
-
-//   // escreva seu código aqui
-
-//  function checaStringsMesmoTamanho() {
-//     const aleatorio = prompt('Digite algo aleatorio')
-//     const aleatorio2 = prompt('Digite algo aleatorio novamente')
-
-// const verificacao = aleatorio.length
-// const verification = aleatorio2.length
-//  const verificacaoReal = aleatorio === aleatorio2
-
-// console.log(verificacaoReal)
-
-//  }
-
-
-
-
-
-
-
-// // Exercício 9
-//   // escreva seu código aqui
-
-
-//  function checaIgualdadeDesconsiderandoCase() {
-
-//     const meuAmigodiz = 'Ola'
-//     const vcDiz = 'Ola'
-
-//     const minusCular = meuAmigodiz.toLowerCase()
-//     const maisCular = vcDiz.toUpperCase()
-
-//           if (meuAmigodiz === vcDiz) {
-//             console.log('true')
-//          } else {
-//             meuAmigodiz != vcDiz
-//             console.log('false')
-//          }
-
-   
-// // Exercício 10
-
-//   // escreva seu código aqui
-
-//  function checaRenovacaoRG() {
-
-//     let anoAtual = prompt('Digite o ano atual') 
-//     let anoDenascimento = prompt('Digite o seu ano de nascimento') 
-//     let identidadeEmitida = prompt('Digite o ano em que sua carteira de identidade foi emitida') 
-
-
-//           if (anoAtual - anoDenascimento <= 20  ) {
-//             console.log('true')
-//          } else { 
-//             identidadeEmitida - anoDenascimento === 10
-//             console.log('false')
-//          }
-
-
-
-//  }
-
-
-
-
-// // Exercício 11
-
-//   // escreva seu código aqui
-
-//  function checaAnoBissexto() {
-
-//     let anoQualquer = prompt('Digite um ano qualquer')
-    
-//           if (anoQualquer % 4 == 0 && (anoQualquer % 100 != 0) || (anoQualquer % 400 == 0) ) {
-//              console.log('true')
-//           } else { 
-           
-           
-//         }
-//     }
-
-
-        // - **São bissextos** todos os anos múltiplos de 400**.**
-        // - **São bissextos** todos os múltiplos de 4, exceto se for múltiplo de 100 mas não de 400**.**
-        // - **Não são bissextos** todos os demais anos.
-
-
-
-
-
-// // Exercício 12
-
-//  escreva seu código aqui
-
-
-//  function checaValidadeInscricaoLabenu() {
-
-//    const maiorIdade = prompt('Você tem mais de 18 anos? Responda com Sim ou Não')
-//    const ensinoMedio = prompt('Você possui o ensino médio completo? Responda com Sim ou Não')
-//    const disponiBilidade = prompt('Você possui disponibilidade exclusiva durante os horários do curso? Responda com Sim ou Não')
 
  
-//  console.log(maiorIdade, ensinoMedio,disponiBilidade)
+
+
+
+// }
+
+// // EXERCÍCIO 03
+
+// function retornaNumerosPares(array) {
+
+//   const arrayPares = array.filter
+//   (array => array % 2 === 0) 
+
+//     return(arrayPares)
+//   }
+
+
+
+// // EXERCÍCIO 04
+
+//   function retornaMaiorNumero(array) {
+
+// 	let maiorNumero = 0;
+
+// 	for (let i = 0; i < array.length; i++) {
+
+// 	   if ( array[i] > maiorNumero ) {
+// 		  maiorNumero = array[i];
+// 	   }
+// 	}
+// return(maiorNumero)
+//   }
+
+ 
+
+// // EXERCÍCIO 05
+
+
+
+// function retornaQuantidadeElementos(array) {
+  
+// 	let quantidadeElementos = array.length
+// 	return (quantidadeElementos)
+
+// }
+
+
+// // EXERCÍCIO 06
+
+// function retornaExpressoesBooleanas() {
+
+// 	const booleano1 = true
+// 	const booleano2 = false
+// 	const booleano3 = !booleano2 
+// 	const booleano4 = !booleano3 
+
+// 	const retornaBooleano = [booleano1 && booleano2 && !booleano4, 
+
+// 	 (booleano1 && booleano2) || !booleano3, 
+	
+// 	  (booleano2 || booleano3) && (booleano4 || booleano1),
+	
+// 	 !(booleano2 && booleano3) || !(booleano1 && booleano3) ,
+	
+// 	 !(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3)]
+    
+//     return(retornaBooleano)
+		
+// }
+
+
+
+// // EXERCÍCIO 07
+
+// function retornaNNumerosPares(n) {
+
+
+// 	const retornaNumerospares = []
+
+// 	let par = 0
+// 	let i = 0
+	
+// 	while(i < n){
+// 	   i++
+// 	   retornaNumerospares.push(par)
+// 	   par += 2
+// 	}
+// 	return (retornaNumerospares)
+// }
+
+
+
+// // EXERCÍCIO 08
+
+// function checaTriangulo(a, b, c) {
+
+// 	if((a === b) && (b === c) && (c === a)){  
+
+//         return "Equilátero"
+//     } else if((a !== b) != (b !== c) !== (c !== a)){
+
+//         return "Escaleno"
+
+//     } else { 
+//         return "Isósceles"
+//     }
+// }
+	
+ 
+
+
+// // EXERCÍCIO 09
+
+// function comparaDoisNumeros(num1, num2) {
+// //   Formato do objeto a ser retornado:
+// //   {
+// //     maiorNumero: X,
+// //     maiorDivisivelPorMenor: Y,
+// //     diferenca: Z
+// //   }
+
+// const comparaDoisNumeros = {
+//     maiorNumero: 0,
+//     maiorDivisivelPorMenor:0 ,
+//     diferenca: 0
+//   }
+//   let maiorNumero
+//   let menorNumero
+
+//   if (num1 >= num2) {
+//     maiorNumero = num1
+//     menorNumero = num2
+
+//   } else if (num2 > num1) {
+//     maiorNumero = num2
+//     menorNumero = num1
+//   }
+
+//   comparaDoisNumeros.maiorNumero = maiorNumero
+//   comparaDoisNumeros.maiorDivisivelPorMenor = maiorNumero % menorNumero === 0
+//   comparaDoisNumeros.diferenca = maiorNumero - menorNumero
+
+//   return(comparaDoisNumeros)
+
+// }
+
+
+// // EXERCÍCIO 10
+
+//  function segundoMaiorEMenor(array) {
+ 
+//     let primeiroMaior = -Infinity
+//     let primeiroMenor = Infinity
+
+//     let segundoMaior = -Infinity
+//     let segundoMenor = Infinity
+
+//     array.filter(item => {
+//         if (item >= primeiroMaior){
+//           segundoMaior = primeiroMaior
+//           primeiroMaior = item
+//         } else if (item < primeiroMaior && item > segundoMaior) {
+//           segundoMaior = item
+//         }
+//         return(segundoMaior)
+//       })
+    
+//       array.filter(item => {
+//         if (item <= primeiroMenor){
+//           segundoMenor = primeiroMenor
+//           primeiroMenor = item
+//         } else if (item > primeiroMenor && item < segundoMenor) {
+//           segundoMenor = item
+//         }
+//         return(segundoMenor)
+//       })
+    
+//       const arrayNovo = [segundoMaior, segundoMenor]
+//       return(arrayNovo)
+//       }
+    
+
+
+
+
+
+// EXERCÍCIO 11
+
+
+// function ordenaArray(array) {
+
+//     return array.sort(function(num1,num2){
+//         return num1 - num2
+//     })
+// }
+    
+
+
+// // EXERCÍCIO 12
+
+// function filmeFavorito() {
+
+    // let filme = {
+
+    //     nome: "O Diabo Veste Prada",
+    //     ano: 2006,
+    //     diretor: "David Frankel",
+    //     atores: ['Meryl Streep', 'Anne Hathaway', 'Emily Blunt', 'Stanley Tucci'],
+
+    //   }
+    //   return(filme)
+    
+
+
+
+// // EXERCÍCIO 13
+
+// function imprimeChamada() {
+
+//     filme = {
+//         nome: 'O Diabo Veste Prada',
+//         ano: 2006,
+//         diretor: 'David Frankel',
+//         atores: ['Meryl Streep', 'Anne Hathaway', 'Emily Blunt', 'Stanley Tucci']
+//      }
+//     frase = `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores[0]}, ${filme.atores[1]}, ${filme.atores[2]}, ${filme.atores[3]}.`
+//      return frase
+// }
+
+
+
+
+
+
+// // EXERCÍCIO 14
+
+// function criaRetangulo(lado1, lado2) {
+
+// const retangulos = {
+
+// largura: lado1,
+// altura: lado2,
+
+// perimetro: 2 * (lado1+lado2),
+// area: lado1*lado2
+// }
+
+// return(retangulos)
+
+// }
+
+
+
+
+// // EXERCÍCIO 15
+
+// function anonimizaPessoa(pessoa) {
+
+//     const pessoaAnonima = {
+//         nome: "Astrodev",
+//         idade: 25,
+//         email: "astrodev@labenu.com.br",
+//         endereco: "Rua do Futuro, 4"
+//     }
+
+//     pessoa.nome = "ANÔNIMO"
+// return (pessoa)
+
+// }
+
+
+
+// // EXERCÍCIO 16A
+
+
+// function maioresDe18(arrayDePessoas) {
+//     [
+//         { nome: "Pedro", idade: 20 },
+//         { nome: "João", idade: 10 },
+//         { nome: "Paula", idade: 12 },
+//         { nome: "Artur", idade: 89 } 
+//     ]
+    
+//     const novoArray = arrayDePessoas.filter 
+//     (item => item.idade>=18)
+//     return(novoArray)
+
+
+
+// }
+
+
+
+// // EXERCÍCIO 16B
+
+//  function menoresDe18(arrayDePessoas) {
+
+// const novoArray = arrayDePessoas.filter
+// (item=> item.idade <18)
+// return(novoArray)
+
+
 
 
 //  }
+
+
+
+// // EXERCÍCIO 17A
+//  function multiplicaArrayPor2(array) {
+
+   
+    
+//     const novoArray = array.map 
+//     (item=> item*2)
+//     return(novoArray)
+
+
+//  }
+
+
+
+// // EXERCÍCIO 17B
+
+// function multiplicaArrayPor2S(array) {
+
+//     const multiplicaArrayString = array.map
+//     (item=>item*2).map
+//     (item=>item.toString())
+
+//     return multiplicaArrayString
+
+
+
+// }
+
+
+
+
+// // EXERCÍCIO 17C
+
+// function verificaParidade(array) {
+
+// const verificaPar = array.map(number =>{
+// if(number % 2===0)
+// return(`${number} é par`)
+//  else {
+// return(`${number} é ímpar`)
+// }
+// })
+// return(verificaPar)
+
+// }
+
+
+// // EXERCÍCIO 18A
+// function retornaPessoasAutorizadas(pessoas) {
+
+// }
+
+// // EXERCÍCIO 18B
+// function retornaPessoasNaoAutorizadas(pessoas) {
+
+// }
+
+// // EXERCÍCIO 19A
+// function ordenaPorNome(consultasNome) {
+
+// }
+
+// // EXERCÍCIO 19B
+// function ordenaPorData(consultasData) {
+
+// }
+
+// // EXERCÍCIO 20
+// function calculaSaldo(contas) {
+
+// }
