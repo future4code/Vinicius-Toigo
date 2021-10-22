@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+height: 30px;
+width: auto;
+}
+
+h4 {
+    padding: 5px;
+    margin: 5px;
+    display:block;
+     
+    
+}
+
+
+#page-grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 70px 1fr 70px;
+}
+
+#conteudo{
+    display: grid;
+    grid-template-rows: 280px 280px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+}
+
+.bolo-um {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-left: 80px;
+
+
+}
+.bolo-dois {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-left: 80px;
+
+}
+.bolo-tres {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-left: 80px;
+
+}
+.bolo-quatro {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-left: 80px;
+
+}
+.bolo-cinco {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-left: 80px;
+
+}
+.bolo-seis {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-left: 80px;
+
+}
+.bolo-sete {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-left: 80px;
+
+}
+
+.bolo.jpg {
+    width: 30px;
+    margin-left: 1px;
+    margin-top: 20px;
+}
+
+header {
+    background-color: mediumvioletred;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 60px;
+    align-items: center;
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+}
+
+nav {
+    background-color: #f2d0e0;
+}
+
+section {
+    background-color: lightsteelblue;
+}
+
+footer {
+    background-color: mediumvioletred;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+button {
+    justify-self: end;
+    font-size: small
+}
+
