@@ -28,7 +28,7 @@ class TelaListaDePlaylists extends React.Component {
 
     deletaPlaylists=(id) => {
         
-        const url =`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlist${id}`
+        const url =`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}`
         axios.delete(url,{
             headers:{
                 Authorization: "vinicius-lussani-joy"
@@ -37,14 +37,41 @@ class TelaListaDePlaylists extends React.Component {
             }
           )
           .then(() => {
-            alert("Usuário apagado com sucesso!");
+            alert("Playlist apagada com sucesso!");
             this.pegaPlaylists();
+            
           })
           .catch((err) => {
+              alert("Ocorreu um erro ao apagar a playlist")
             console.log(err.response.data)
           })
         }
   
+
+        // adicionaTrack=()=>{
+
+        //     const url=`https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks`
+        //     const body = {
+        //         "name": "string", 
+        //         "artist": "string",
+        //         "url": "string"
+        //     }
+        //     axios.post(url,body,{
+        //         headers:{
+        //             Authorization: "vinicius-lussani-joy"
+
+
+        //     }
+
+        // }
+        //     )
+
+
+            
+
+
+
+
     render() {
 
         let playListsMap = this.state.playlists.map((playlist)=>{

@@ -2,6 +2,28 @@ import React from 'react';
 import axios from 'axios'
 import styled from 'styled-components'
 
+
+const H3Estilizado=styled.div`
+margin-left:15%;
+margin-top:5%;
+`
+const ButtonCriar=styled.button`
+margin-top:15px;
+background-color:green;
+border-radius:5px;
+width:65px;
+height:25px;
+cursor:pointer;
+text-align:center;
+margin-left:  5%;
+
+`
+const InputEstilizado=styled.input`
+margin-left:15%;
+
+`
+
+
 class TelaCriarPlaylists extends React.Component {
 
   state = {
@@ -37,10 +59,10 @@ class TelaCriarPlaylists extends React.Component {
 
 
      <div>
-        <h3>Criar Playlist</h3>
+        <H3Estilizado>Criar Playlist</H3Estilizado>
         <div>
-            <input placeholder="Nome da Playlist" value={this.state.textoInput} onChange={this.mudaTextoInput} />
-            <button onClick={this.CriarPlaylist}>Criar</button>
+            <InputEstilizado placeholder="Nome da Playlist" value={this.state.textoInput} onChange={this.mudaTextoInput} />
+            <ButtonCriar onClick={this.CriarPlaylist}>Criar</ButtonCriar>
         </div>
       </div>
   )}

@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import TelaCriarPlaylists from './components/TelaCriarPlaylists.js';
 import TelaListaDePlaylists from './components/TelaListaDePlaylists';
+import styled from 'styled-components'
+
+
 
 class App extends React.Component {
   state  = {
