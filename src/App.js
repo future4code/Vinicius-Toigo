@@ -1,26 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import Header from './components/Header';
+import PlaylistCreationPage from './components/PlaylistCreationPage';
+import PlaylistManagerPage from './components/PlaylistManagerPage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const AppContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+`
+
+
+class App extends React.Component {
+  state = {
+    currentPage: "playlistCreationPage"
+  }
+
+  changePage = (currentPage) => {
+    this.setState({currentPage: currentPage})
+  }
+
+  render () {
+    const renderCurrentPage = () => {
+      if (this.state.currentPage === "playlistCreationPage") {
+        return <PlaylistCreationPage />
+      } else if (this.state.currentPage === "playlistManagerPage") {
+        return <PlaylistManagerPage />
+      }
+    }
+
+    return (
+      <AppContainer>
+        <Header 
+          changePage={this.changePage}
+        />
+        {renderCurrentPage()}
+      </AppContainer>
+    );
+  }
 }
 
 export default App;
