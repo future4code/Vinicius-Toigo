@@ -25,6 +25,21 @@ const TrackCreationForm = styled.form`
     }
 
 `
+const ButtonEstilizado4=styled.button`
+border-radius:20px;
+background-color:white;
+border: 4px solid black;
+cursor:pointer;
+box-shadow: 0px 2px 2px lightgrey;
+`
+
+const ButtonEstilizado5=styled.button`
+border-radius:20px;
+background-color:white;
+border: 4px solid black;
+cursor:pointer;
+box-shadow: 0px 2px 2px lightgrey;
+`
 
 class PlaylistDetail extends React.Component {
     state = {
@@ -124,10 +139,10 @@ class PlaylistDetail extends React.Component {
                             onChange={this.changeInputValues}
                         />
                     </div>
-                    <button type="submit" >Adicionar música</button>
+                    <ButtonEstilizado4 type="submit" >Adicionar música</ButtonEstilizado4>
                 </TrackCreationForm>
                 {tracks}
-                <button onClick={() => this.props.changePage("playlists", "")} >Voltar para playlists</button>
+                <ButtonEstilizado5 onClick={() => this.props.changePage("playlists", "")} >Voltar para playlists</ButtonEstilizado5>
             </PlaylistDetailContainer>
         )
     };

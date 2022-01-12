@@ -19,6 +19,14 @@ const PlaylistCreationForm = styled.form`
     justify-content: space-around;
 `
 
+const ButtonEstilizado3=styled.button`
+border-radius:20px;
+background-color:white;
+border: 4px solid black;
+cursor:pointer;
+box-shadow: 0px 2px 2px lightgrey;
+`
+
 class PlaylistCreationPage extends React.Component {
     state = {
         inputNameValue: ""
@@ -54,7 +62,7 @@ class PlaylistCreationPage extends React.Component {
                         value={this.state.inputNameValue}
                         onChange={this.changeInputnameValue}
                     />
-                    <button type="submit">Criar Playlist</button>
+                    <ButtonEstilizado3 type="submit">Criar Playlist</ButtonEstilizado3>
                 </PlaylistCreationForm>
             </PlaylistCreationFormContainer>
         );

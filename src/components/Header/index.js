@@ -15,14 +15,24 @@ const ButtonsContainer = styled.div`
     justify-content: space-between;
     
 `
+const ButtonEstilizado=styled.button`
+border-radius:20px;
+background-color:white;
+border: 4px solid black;
+cursor:pointer;
+button-hover:grey;
+`
+
 
 const Header = (props) => {
     return (
         <HeaderContainer>
             <h1>Labefy</h1>
             <ButtonsContainer>
-                <button onClick={() => props.changePage("playlistCreationPage")} >Criar Playlist</button>
-                <button onClick={() => props.changePage("playlistManagerPage")} >Lista de Playlists</button>
+
+                <ButtonEstilizado onClick={() => props.changePage("playlistCreationPage")} >Criar Playlist</ButtonEstilizado>
+                <ButtonEstilizado onClick={() => props.changePage("playlistManagerPage")} >Lista de Playlists</ButtonEstilizado>
+
             </ButtonsContainer>
         </HeaderContainer>
     )
