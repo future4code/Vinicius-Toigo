@@ -1,7 +1,9 @@
 import React from 'react'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MessageIcon from '@mui/icons-material/Message';
-import styled from 'styled-components';
+
+import { createGlobalStyle } from "styled-components";
+
 
 
 
