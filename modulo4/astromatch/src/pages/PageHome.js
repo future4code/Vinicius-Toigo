@@ -24,21 +24,9 @@ const PageHomeProfile = styled.div`
     }
 `
 
-const BotaoEscolherPessoa= styled.button`
-    display:flex;
-    flex-direction:column;
-    align-items: center;
 
 
-`
 
-const BotaoEscolherPessoa2=styled.button`
-display:flex;
-flex-direction:column;
-align-items: center;
-
-
-`
 const PageHomeImg = styled.img`
     width: 25vw;
     height:50vh;
@@ -85,8 +73,8 @@ export default function PageHome(){
                 <h2>{profile.name}, {profile.age} anos</h2>
                 <p>{profile.bio}</p>
                 <div>
-                    <BotaoEscolherPessoa onClick={()=>choosePerson(false)}>❌</BotaoEscolherPessoa>
-                    <BotaoEscolherPessoa2 onClick={()=>choosePerson(true)}>💘</BotaoEscolherPessoa2>
+                    <button onClick={()=>choosePerson(false)}>❌</button>
+                    <button onClick={()=>choosePerson(true)}>💘</button>
                 </div>
             </PageHomeProfile>
             : <div></div>}

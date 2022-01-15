@@ -16,12 +16,13 @@ const GlobalStyle = createGlobalStyle`
 
 
 const IrParaMatches=styled.button`
-display:flex;
-flex-direction:column;
-align-items: center;
+margin-top:15px;
+margin-left:40% ;
+`
+const LimparMatches = styled.button`
+
 
 `
-
 
 export default function App(){
   const [currentPage, setCurrentPage] = useState('PageHome')
@@ -47,7 +48,7 @@ export default function App(){
     {currentPage ==='PageHome'?<PageHome/> : <PageMatch/>}
     <IrParaMatches onClick={changePage}>{currentPage === 'PageHome'? 'Ir para Matches' : 'Ir para Início'}</IrParaMatches>
    
-    <button onClick={cleanMatch}>Limpar Matches</button>
+    <LimparMatches onClick={cleanMatch}>Limpar Matches</LimparMatches>
   </div>
   )
 }
