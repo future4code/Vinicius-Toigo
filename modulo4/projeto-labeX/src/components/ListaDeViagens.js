@@ -1,16 +1,16 @@
-
-import React,{useEffect} from 'react';
+import React, {  useState,useEffect } from 'react';
 import styled from 'styled-components'
+import axios from 'axios';
 
-const DivDosBotoes=styled.div`
+const DivDosBotoes = styled.div`
 display :grid;
-margin-top:200px;
+margin-top:100px;
 align-items: center;
 justify-content: center;
 
 
 `
-const BotaoVoltar= styled.button`
+const BotaoVoltar = styled.button`
 background-color:red
 color:black
 margin-bottom:25px;
@@ -18,7 +18,7 @@ border-radius:25px;
 cursor: pointer;
 
 `
-const BotaoInscrever= styled.button`
+const BotaoInscrever = styled.button`
 background-color:red
 color:black
 margin-top:25px;
@@ -26,35 +26,51 @@ border-radius:25px;
 cursor: pointer;
 `
 
+export const ListaDeViagens = () => {
+
   
+  const [data, setData] = useState([])
 
-function ListaDeViagens () {
+  useEffect(() => {
+    pegarViagens()
+  }, [])
 
-    useEffect(()=>{
-    axios.get('https://us-central1-missao-newton.cloudfunctions.net/futureX/vinicius/trips')
-    .then(responde.data)
-    .catch('Ocorreu um erro')
-   
-    })
+  const pegarViagens = async () => {
 
-    return (
+    await
+      axios.get('https://us-central1-missao-newton.cloudfunctions.net/futureX/vinicius/trips')
+        .then((res) => {
+          console.log(res.data.trips)
+          setData(res.data.trips)
+        }).catch((err) => {
+          console.log(err.response)
+        })
+  }
 
-      <DivDosBotoes >
-  
+  return (
       
+    <DivDosBotoes >
+
       
-      <BotaoVoltar>Ver Viagens</BotaoVoltar> <hr></hr>
-      <BotaoInscrever>Área de Admin</BotaoInscrever>
 
-        <h1>Lista de Viagens</h1>
-      </DivDosBotoes>
-        
+      <h1>Lista de Viagens</h1>
+      {data && data.map((elemento,indice)=>{
+        return (
 
-       
+          <div key={indice}>
+             <h1>{elemento.planet}</h1>
+             <p>{elemento.name}</p>
+             <p>{elemento.description}</p>
+             <p>{elemento.date}</p>
+          </div>
+        )
+      })}
       
-    );
-  
-  
-    }
+    </DivDosBotoes>
 
-    export default ListaDeViagens
+
+  );
+
+
+}
+

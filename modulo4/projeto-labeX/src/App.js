@@ -1,45 +1,34 @@
 import React from 'react';
-import styled from 'styled-components';
-import ListaDeViagens from './components/ListaDeViagens';
-
-const DivDosBotoes=styled.div`
-display :grid;
-margin-top:200px;
-align-items: center;
-justify-content: center;
+import {BrowserRouter,Switch, Route} from "react-router-dom";
+import { ListaDeViagens } from './components/ListaDeViagens';
+import { PaginaPrincipal } from './components/PaginaPrincipal';
 
 
-`
-const BotaoVerViagens= styled.button`
-background-color:red
-color:black
-margin-bottom:25px;
-border-radius:25px;
-cursor: pointer;
-
-`
-const BotaoAreaAdmin= styled.button`
-background-color:red
-color:black
-margin-top:25px;
-border-radius:25px;
-cursor: pointer;
-
-`
-
-function App() {
+  const App = () => {
   return (
-    <DivDosBotoes >
 
-    <h1>LabeX</h1>
-    
-    <BotaoVerViagens onClick={'ListaDeViagens'}>Ver Viagens</BotaoVerViagens> <hr></hr>
-    <BotaoAreaAdmin>Área de Admin</BotaoAreaAdmin>
-    </DivDosBotoes>
+    <BrowserRouter>
 
+    <Switch>  
+
+        <Route exact path={"/"} component={PaginaPrincipal}>
+         {/* <PaginaPrincipal/> */}
+        </Route>
+
+        <Route exact path={"/viagens"} component={ListaDeViagens}>
+          {/* <ListaDeViagens/> */}
+        </Route>
+
+        <Route>
+          {/* <AdminHome/> */}
+        </Route>
+      
+        </Switch>
+       
+    </BrowserRouter>
      
     
   );
 }
-
 export default App;
+
