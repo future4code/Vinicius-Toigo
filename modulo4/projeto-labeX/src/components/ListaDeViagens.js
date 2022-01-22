@@ -1,6 +1,7 @@
 import React, {  useState,useEffect } from 'react';
 import styled from 'styled-components'
 import axios from 'axios';
+import {useHistory} from 'react-router-dom';
 
 const DivDosBotoes = styled.div`
 display :grid;
@@ -26,6 +27,12 @@ border-radius:25px;
 cursor: pointer;
 `
 
+function Navegacao(){
+  const history = useHistory();
+   const voltarhome = ()=>{
+   history.push("/home");
+ };
+}
 export const ListaDeViagens = () => {
 
   
@@ -47,25 +54,38 @@ export const ListaDeViagens = () => {
         })
   }
 
+    
+    // const ListaDeViagens = ()=> {
+    //   const history=useHistory()
+
+    //   const vaParaPaginaPrincipal = () => {
+    //     history.push("/")
+
+    //   }
+    // }
+
+    
   return (
       
     <DivDosBotoes >
 
-      
+<BotaoVoltar onClick={() => voltarhome('/')} >Voltar </BotaoVoltar> <br></br>
 
       <h1>Lista de Viagens</h1>
       {data && data.map((elemento,indice)=>{
         return (
 
-          <div key={indice}>
+          <div key={indice}>  
              <h1>{elemento.planet}</h1>
              <p>{elemento.name}</p>
              <p>{elemento.description}</p>
              <p>{elemento.date}</p>
           </div>
+
+         
         )
       })}
-      
+       
     </DivDosBotoes>
 
 

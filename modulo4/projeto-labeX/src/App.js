@@ -11,7 +11,7 @@ import { PaginaPrincipal } from './components/PaginaPrincipal';
 
     <Switch>  
 
-        <Route exact path={"/"} component={PaginaPrincipal}>
+        <Route exact path={"/home"} component={PaginaPrincipal}>
          {/* <PaginaPrincipal/> */}
         </Route>
 
