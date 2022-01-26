@@ -32,16 +32,13 @@ export const PaginaPrincipal = () => {
 
   const history = useHistory()
 
-
-
   return (
     <DivDosBotoes >
 
       <h1>LabeX</h1>
 
-
-      <BotaoVerViagens onClick={() => history.push('/viagens')} >Ver Viagens</BotaoVerViagens> <br></br>
-      <BotaoAreaAdmin>Área de Admin</BotaoAreaAdmin>
+      <BotaoVerViagens onClick={() => history.push('/viagens')}>Ver Viagens</BotaoVerViagens> <br></br>
+      <BotaoAreaAdmin>Área de Administrador</BotaoAreaAdmin>
 
     </DivDosBotoes>
   )

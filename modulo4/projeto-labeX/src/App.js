@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter,Switch, Route} from "react-router-dom";
 import { ListaDeViagens } from './components/ListaDeViagens';
 import { PaginaPrincipal } from './components/PaginaPrincipal';
-
+import {Formulario} from './components/Formulario'
 
   const App = () => {
   return (
@@ -12,15 +12,15 @@ import { PaginaPrincipal } from './components/PaginaPrincipal';
     <Switch>  
 
         <Route exact path={"/home"} component={PaginaPrincipal}>
-         {/* <PaginaPrincipal/> */}
+        
         </Route>
 
         <Route exact path={"/viagens"} component={ListaDeViagens}>
-          {/* <ListaDeViagens/> */}
+         
         </Route>
 
-        <Route>
-          {/* <AdminHome/> */}
+        <Route exact path={"/Formulario"} component={Formulario}>
+       
         </Route>
       
         </Switch>

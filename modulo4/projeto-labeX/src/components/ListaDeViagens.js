@@ -19,7 +19,7 @@ border-radius:25px;
 cursor: pointer;
 
 `
-const BotaoInscrever = styled.button`
+const BotaoAdminHome = styled.button`
 background-color:red
 color:black
 margin-top:25px;
@@ -27,15 +27,14 @@ border-radius:25px;
 cursor: pointer;
 `
 
-function Navegacao(){
-  const history = useHistory();
-   const voltarhome = ()=>{
-   history.push("/home");
- };
-}
 export const ListaDeViagens = () => {
 
-  
+  const history = useHistory()
+
+   const vaParaPaginaPrincipal = ()=>{
+   history.push("/home");
+   }
+
   const [data, setData] = useState([])
 
   useEffect(() => {
@@ -53,36 +52,24 @@ export const ListaDeViagens = () => {
           console.log(err.response)
         })
   }
-
-    
-    // const ListaDeViagens = ()=> {
-    //   const history=useHistory()
-
-    //   const vaParaPaginaPrincipal = () => {
-    //     history.push("/")
-
-    //   }
-    // }
-
     
   return (
       
     <DivDosBotoes >
 
-<BotaoVoltar onClick={() => voltarhome('/')} >Voltar </BotaoVoltar> <br></br>
-
+<BotaoVoltar onClick={() => history.push('/home')} >Voltar</BotaoVoltar> <br></br>
+<BotaoAdminHome onClick={() => history.push('/FormularioAplicação')} >Inscrever-se</BotaoAdminHome> <br></br>
       <h1>Lista de Viagens</h1>
       {data && data.map((elemento,indice)=>{
         return (
 
-          <div key={indice}>  
+             <div key={indice}>  
              <h1>{elemento.planet}</h1>
              <p>{elemento.name}</p>
              <p>{elemento.description}</p>
              <p>{elemento.date}</p>
           </div>
 
-         
         )
       })}
        
@@ -91,6 +78,6 @@ export const ListaDeViagens = () => {
 
   );
 
-
 }
+
 
