@@ -4,7 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
+
+export const url =
+ "https://us-central1-labenu-apis.cloudfunctions.net/labeX/vinicius-toigo-joy/populate";
+
+
+ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,

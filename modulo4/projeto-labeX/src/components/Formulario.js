@@ -21,7 +21,7 @@ cursor: pointer;
 `
 
 export const Formulario = () => {
-
+  const history = useHistory()
     
   return (
       
@@ -31,38 +31,38 @@ export const Formulario = () => {
 
       <h1>Formulário de Aplicação</h1>
 
-      <Select
+      <select
           type="text"
-          placeholder="Escolha uma viagem"
+          
          
         >
-          <option value=""></option>
+          <option value="">Escolha uma viagem</option>
           
-        </Select>
+        </select>
 
-          <Input
+          <input
           type="text"
           placeholder="Nome"
 
           />
-          <Input
+          <input
           type="number"
           placeholder="Idade"/>
 
-          <Input
+          <input
           type="text"
           placeholder="Profissão"
           />
 
-          <Select
+          <select
           type="text"
           placeholder="Escolha um país"
           >
           <option value="Brasil">Brasil</option>
           
-        </Select>
+        </select>
 
-        <Textarea 
+        <textarea 
         type="text"
         placeholder="Texto de candidatura"
       
@@ -70,9 +70,7 @@ export const Formulario = () => {
 
     </DivFormulario>
 
-
   );
-
 
 }
 

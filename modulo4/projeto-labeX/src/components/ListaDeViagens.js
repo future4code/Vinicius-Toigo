@@ -19,7 +19,7 @@ border-radius:25px;
 cursor: pointer;
 
 `
-const BotaoAdminHome = styled.button`
+const BotaoForm = styled.button`
 background-color:red
 color:black
 margin-top:25px;
@@ -58,7 +58,8 @@ export const ListaDeViagens = () => {
     <DivDosBotoes >
 
 <BotaoVoltar onClick={() => history.push('/home')} >Voltar</BotaoVoltar> <br></br>
-<BotaoAdminHome onClick={() => history.push('/FormularioAplicação')} >Inscrever-se</BotaoAdminHome> <br></br>
+<BotaoForm onClick={() => history.push('/formulario')} >Inscrever-se</BotaoForm> <br></br>
+
       <h1>Lista de Viagens</h1>
       {data && data.map((elemento,indice)=>{
         return (

@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 
 const DivDosBotoes = styled.div`
 display :grid;
@@ -30,15 +31,20 @@ cursor: pointer;
 
 export const PaginaPrincipal = () => {
 
-  const history = useHistory()
+ 
 
+  const history = useHistory()
+  const vaParaPaginaAdmin = ()=>{
+    history.push("/adminhome");
+    }
+    
   return (
     <DivDosBotoes >
 
       <h1>LabeX</h1>
 
       <BotaoVerViagens onClick={() => history.push('/viagens')}>Ver Viagens</BotaoVerViagens> <br></br>
-      <BotaoAreaAdmin>Área de Administrador</BotaoAreaAdmin>
+      <BotaoAreaAdmin onclick={()=> history.push('/adminhome')}>Área de Administrador</BotaoAreaAdmin>
 
     </DivDosBotoes>
   )

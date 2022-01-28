@@ -2,7 +2,9 @@ import React from 'react';
 import {BrowserRouter,Switch, Route} from "react-router-dom";
 import { ListaDeViagens } from './components/ListaDeViagens';
 import { PaginaPrincipal } from './components/PaginaPrincipal';
-import {Formulario} from './components/Formulario'
+import {Formulario} from './components/Formulario';
+import {AdminHome} from './components/AdminHome';
+
 
   const App = () => {
   return (
@@ -19,14 +21,18 @@ import {Formulario} from './components/Formulario'
          
         </Route>
 
-        <Route exact path={"/Formulario"} component={Formulario}>
+        <Route exact path={"/formulario"} component={Formulario}>
        
         </Route>
-      
+
+        <Route exact path={"/adminhome"} component={AdminHome}>
+
+          </Route>
+          
         </Switch>
        
     </BrowserRouter>
-     
+  
     
   );
 }
