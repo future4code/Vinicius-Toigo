@@ -34,6 +34,7 @@ export const PaginaPrincipal = () => {
  
 
   const history = useHistory()
+
   const vaParaPaginaAdmin = ()=>{
     history.push("/adminhome");
     }

@@ -4,7 +4,7 @@ import { ListaDeViagens } from './components/ListaDeViagens';
 import { PaginaPrincipal } from './components/PaginaPrincipal';
 import {Formulario} from './components/Formulario';
 import {AdminHome} from './components/AdminHome';
-
+import {CriarViagem} from './components/CriarViagem';
 
   const App = () => {
   return (
@@ -13,7 +13,7 @@ import {AdminHome} from './components/AdminHome';
 
     <Switch>  
 
-        <Route exact path={"/home"} component={PaginaPrincipal}>
+        <Route exact path={"/"} component={PaginaPrincipal}>
         
         </Route>
 
@@ -28,7 +28,9 @@ import {AdminHome} from './components/AdminHome';
         <Route exact path={"/adminhome"} component={AdminHome}>
 
           </Route>
-          
+          <Route exact path={"/criarviagem"} component={CriarViagem}>
+
+          </Route>
         </Switch>
        
     </BrowserRouter>

@@ -57,7 +57,7 @@ export const ListaDeViagens = () => {
       
     <DivDosBotoes >
 
-<BotaoVoltar onClick={() => history.push('/home')} >Voltar</BotaoVoltar> <br></br>
+<BotaoVoltar onClick={() => history.push('/')} >Voltar</BotaoVoltar> <br></br>
 <BotaoForm onClick={() => history.push('/formulario')} >Inscrever-se</BotaoForm> <br></br>
 
       <h1>Lista de Viagens</h1>

@@ -11,30 +11,62 @@ justify-content: center;
 
 
 `
+
 const BotaoVoltar = styled.button`
-background-color:red
-color:black
-margin-bottom:25px;
-border-radius:25px;
-cursor: pointer;
+-moz-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	-webkit-box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	background-color:#a73f2d;
+	-webkit-border-radius:36px;
+	-moz-border-radius:36px;
+	border-radius:36px;
+	border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:15px 40px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #7a2a1d;
 
 `
+const BotaoAplicarParaViagem = styled.button`
+box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	background-color:#a73f2d;
+	border-radius:36px;
+	border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:15px 40px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #7a2a1d;
+ 
+`
 
+
+        
 export const Formulario = () => {
   const history = useHistory()
-    
+
   return (
       
     <DivFormulario >
 
-      <BotaoVoltar onClick={() => history.push('/home')} >Voltar</BotaoVoltar> <br></br>
+    
+
+      <BotaoVoltar onClick={() => history.push('/')} >Voltar</BotaoVoltar> <br></br>
 
       <h1>Formulário de Aplicação</h1>
 
       <select
           type="text"
-          
-         
+
         >
           <option value="">Escolha uma viagem</option>
           
@@ -68,6 +100,8 @@ export const Formulario = () => {
       
         />
 
+    <BotaoAplicarParaViagem>Aplicar para a Viagem</BotaoAplicarParaViagem>
+     
     </DivFormulario>
 
   );

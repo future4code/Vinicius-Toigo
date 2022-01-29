@@ -30,12 +30,16 @@ cursor: pointer;
 export const AdminHome = () => {
     const history = useHistory()
 
-    const vaParaPaginaAdmin = ()=>{
+    const vaParaPagina = ()=>{
         history.push("/adminhome");
         }
+
+
+
     <div>
         <BotaoVoltar onClick={() => history.push('/')} >Voltar</BotaoVoltar> <br></br>
-        <BotaoCriarViagem> Criar Viagem</BotaoCriarViagem>
+        <BotaoCriarViagem onClick={()=> history.push('criarviagem')}> Criar Viagem</BotaoCriarViagem>
+
         <BotaoLogout>Logout</BotaoLogout>
 
         <h1>Painel Administrativo</h1>
