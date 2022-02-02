@@ -12,19 +12,35 @@ justify-content: center;
 
 `
 const BotaoVoltar = styled.button`
-background-color:red
-color:black
-margin-bottom:25px;
-border-radius:25px;
-cursor: pointer;
+box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	background-color:#a73f2d;
+	border-radius:36px;
+	border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:15px 40px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #7a2a1d;
 
 `
 const BotaoForm = styled.button`
-background-color:red
-color:black
-margin-top:25px;
-border-radius:25px;
-cursor: pointer;
+box-shadow:inset 0px 34px 0px -15px #b54b3a;
+	background-color:#a73f2d;
+	border-radius:36px;
+	border:1px solid #241d13;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:15px 40px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #7a2a1d;
 `
 
 export const ListaDeViagens = () => {

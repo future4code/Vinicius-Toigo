@@ -5,6 +5,7 @@ import { PaginaPrincipal } from './components/PaginaPrincipal';
 import {Formulario} from './components/Formulario';
 import {AdminHome} from './components/AdminHome';
 import {CriarViagem} from './components/CriarViagem';
+import {Login} from './components/Login';
 
   const App = () => {
   return (
@@ -29,6 +30,9 @@ import {CriarViagem} from './components/CriarViagem';
 
           </Route>
           <Route exact path={"/criarviagem"} component={CriarViagem}>
+
+           </Route>
+          <Route exact path={"/login"} component={Login}> 
 
           </Route>
         </Switch>
