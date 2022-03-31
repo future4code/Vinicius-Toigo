@@ -115,7 +115,33 @@ const postsDosUsuarios : Posts[] = [
 
 
 app.get('/posts',(req :Request,res: Response)=>{
-    const posts=postsDosUsuarios.map(user=>Posts)
-    res.status(200).send(postsDosUsuarios)
+    if(!postsDosUsuarios.length){
+        res.status(401).send("Não tem posts.")
+     }
+    res.status(201).send(postsDosUsuarios)
     
 })
+
+// - Exercício 8
+    
+//     Construa um endpoint que retorne os posts de um usuário em particular.
+
+
+app.get("/post/:userId", (req: Request, res: Response) => {
+
+    let user = req.params.userId
+
+    const post = postsDosUsuarios.filter((post) => {
+      
+    })
+
+    if(!user) {
+        return res.status(400).send("Entre com userId válido.")
+     } else if(post.length === 0) {
+        return res.status(400).send("Nenhum resultado encontrado.")
+     }
+        
+        res.status(201).send(post)   
+})
+
+
