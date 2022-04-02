@@ -55,7 +55,7 @@ const afazeres:ToDo[] =
     "completed": true
   },
   {
-    "userId": 1,
+    "userId": 2,
     "id": 2,
     "title": "Fazer exercícios",
     "completed": false
@@ -70,7 +70,7 @@ const afazeres:ToDo[] =
 //     retorne os afazeres 
 //     concluídos ou somente os que ainda estão em andamento.
 
-app.get('/ToDo/false', (req, res) => {       
+app.get('/false', (req, res) => {       
 
   const tarefa = afazeres.filter(
     (tarefa) => tarefa.completed === false
@@ -79,7 +79,7 @@ app.get('/ToDo/false', (req, res) => {
   res.send(tarefa)
 })
 
-app.get('/ToDo/true', (req, res) => {       
+app.get('/true', (req, res) => {       
 
   const tarefa = afazeres.filter(
     (tarefa) => tarefa.completed === true
@@ -94,7 +94,7 @@ app.get('/ToDo/true', (req, res) => {
 //     A resposta deve retornar o array de afazeres atualizado.
 
 
-app.post('/ToDo/create', (req, res) => { 
+app.post('/create', (req, res) => { 
 
   const userName = req.headers.authorization;
   const tarefaName = req.body.title;
@@ -118,18 +118,53 @@ res.status(201).send([...afazeres, novaTarefa]);
 //     Construa um endpoint de edição do status de 
 //     um afazer, ou seja, de completo para incompleto e vice-versa.
 
-app.put("/editTask",(req,res)=>{
+app.put("/todos/:id/completed", (req, res) => {
 
+  const id = Number(req.params.id)
 
-  const toDoStatus=req.body.completed
-
-  if (!toDoStatus) {
-    res.status(400).send("Favor informar o status da tarefa no body.");
-    return;
+  for (let todo of afazeres) {
+    if (todo.id === id) {
+      todo.completed = !todo.completed
+    }
   }
-const newStatus={
-  ...afazeres,
-  completed:toDoStatus
-}
-res.send(newStatus)
+
+  res.send(afazeres)
+})
+
+// - Exercício 7
+    
+//     Construa um endpoint que 
+//     deleta um determinado afazer de acordo com sua id.
+
+app.delete("/todos/:id", (req, res) => {
+
+  const id = Number(req.params.id)
+
+  for (let i = 0; i < afazeres.length; i++) {
+    if (afazeres[i].id === id) {
+      afazeres.splice(i, 1)
+    }
+  }
+
+  res.send(afazeres)
+})
+
+// - Exercício 8
+    
+//     Construa um endpoint que retorne todos os
+//      afazeres de uma determinada id de usuário.
+
+
+app.get("/users/:userId/todos", (req, res) => {
+  const userId = Number(req.params.userId)
+
+  const result = []
+
+  for (let todo of afazeres) {
+    if (todo.userId === userId) {
+      result.push(todo)
+    }
+  }
+
+  res.send(result)
 })
