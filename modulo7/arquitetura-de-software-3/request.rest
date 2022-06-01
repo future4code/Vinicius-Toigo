@@ -1,0 +1,25 @@
+POST http://localhost:3003/user/create
+Content-Type: application/json
+
+{
+    "name": "teste",
+    "email": "email@email.com",
+    "password": "23432535"
+}
+
+###
+GET http://localhost:3003/user/get
+
+###
+POST http://localhost:3003/movie/create
+Content-Type: application/json
+
+{
+    "title":"Pulp Fiction",
+    "description":"Assassino que trabalha para a máfia se apaixona pela esposa de seu chefe quando é convidado a acompanhá-la, um boxeador descumpre sua promessa de perder uma luta e um casal tenta um assalto que rapidamente sai do controle.",
+    "duration_in_minutes":245,
+    "year_of_release":1994
+}
+
+###
+GET http://localhost:3003/movie/get
