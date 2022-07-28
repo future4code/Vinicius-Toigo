@@ -3,7 +3,7 @@ import { connection } from "../index"
 
 export async function getAllProducts():Promise<any> {
   
-     const allProducts = await connection("amaro_products")
+     const allProducts = await connection("amaro_products1")
     
     return allProducts  
  }

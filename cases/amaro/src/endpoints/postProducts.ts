@@ -7,22 +7,18 @@ export default async function createProduct(
     res: Response
  ):Promise<any> {
    try {
-    const { name, tag, image_url } = req.body;
+    const { name, image_url } = req.body;
     if(!name){
       throw new Error("Você precisa informar um nome")
-    };
-    if(!tag || tag.length === 0){
-      throw new Error("Voçê precisa informar um valor maior que 0")
-    };
+    }
     if(!image_url){
       throw new Error("Você precisa informar a URL de uma imagem válida")
     };
-        
-    await connection("amaro_products")
+
+    await connection("amaro_products1")
     .insert({
     id:idCreate(),
     name,
-    tag,
     image_url
     })
     

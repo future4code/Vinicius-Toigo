@@ -3,16 +3,19 @@ import express, {Express} from 'express'
 import cors from 'cors'
 import { AddressInfo } from "net";
 import knex from "knex";
-
+import dotenv from "dotenv";
 import { selectAllProducts } from './endpoints/getProducts';
 import createProduct from './endpoints/postProducts';
+import {getProductsById} from './endpoints/getProductsById'
 
 const app: Express = express();
-import dotenv from "dotenv";
+
+dotenv.config();
 app.use(express.json());
 app.use(cors());
 
 app.get ('/products', selectAllProducts)
+app.get ('/products/:id', getProductsById)
 app.post ('/products', createProduct)
 
 
